@@ -1,0 +1,25 @@
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+RewriteEngine On
+#clean url
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
+#force slash
+RewriteCond %{REQUEST_URI} /+[^\.]+$
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+
+RewriteRule ^profile/([0-9]) profile.php
+RewriteRule ^nurse_profile/([0-9]) nurse_profile.php
+RewriteRule ^store/([0-9a-zA-Z]+.*)/ store/store.php
+RewriteRule ^index/ index.php
+RewriteRule ^login/ login.php
+RewriteRule ^forgot-password/ forgot_password.php
+RewriteRule ^home/ home.php
+RewriteRule ^register-nurse/ add_nurse.php
+RewriteRule ^change_password/ change_password.php
+RewriteRule ^active_nurses/ nurses_on_duty.php
+RewriteRule ^nurses_off_duty/ nurses_off_duty.php
+RewriteRule ^nurses_on_leave/ nurses_on_leave.php
+RewriteRule ^view_roaster/ calendar.php
