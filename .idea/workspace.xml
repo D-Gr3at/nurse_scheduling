@@ -15,17 +15,22 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="480d9c92-b53c-4b70-ae14-283221035ecb" name="Default Changelist" comment="" />
+    <list default="true" id="480d9c92-b53c-4b70-ae14-283221035ecb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/all_nurses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_nurse.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_nurse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/include/side_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/include/side_bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/nurse.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/nurse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/nurses_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/nurses_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +43,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/AdminLTE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -87,7 +92,11 @@
       <workItem from="1610287521407" duration="27816000" />
       <workItem from="1610349667397" duration="39272000" />
       <workItem from="1610531867693" duration="64404000" />
-      <workItem from="1610699020228" duration="37813000" />
+      <workItem from="1610699020228" duration="43120000" />
+      <workItem from="1610895699228" duration="678000" />
+      <workItem from="1610912246576" duration="742000" />
+      <workItem from="1610953662168" duration="1234000" />
+      <workItem from="1610963888226" duration="1843000" />
     </task>
     <servers />
   </component>
@@ -107,10 +116,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="176" y="248" key="#SQL_Dialects" timestamp="1610720964187">
+    <state x="176" y="248" key="#SQL_Dialects" timestamp="1610964605222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="176" y="248" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1610720964187" />
+    <state x="176" y="248" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1610964605222" />
     <state x="498" y="289" key="#Stylelint" timestamp="1610233228647">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -151,10 +160,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="595" y="119" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1610720553943" />
-    <state x="602" y="332" key="NewPhpFileDialog" timestamp="1610812786625">
+    <state x="602" y="332" key="NewPhpFileDialog" timestamp="1610963969112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="602" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1610812786625" />
+    <state x="602" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1610963969112" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1610202826801">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -171,9 +180,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1610350094382" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610813684629">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1610963832555">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610813684629" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1610963832555" />
   </component>
 </project>

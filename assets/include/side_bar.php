@@ -56,6 +56,12 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
+                              <a href="nurses_all/" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>All Nurses</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
                               <a href="nurses_on_leave/" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Nurses On Leave</p>

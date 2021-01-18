@@ -14,6 +14,7 @@ RewriteRule ^profile/([0-9]) profile.php
 RewriteRule ^nurse_profile/([0-9]) nurse_profile.php
 RewriteRule ^store/([0-9a-zA-Z]+.*)/ store/store.php
 RewriteRule ^index/ index.php
+RewriteRule ^nurses_all/ all_nurses.php
 RewriteRule ^login/ login.php
 RewriteRule ^forgot-password/ forgot_password.php
 RewriteRule ^home/ home.php

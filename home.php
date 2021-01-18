@@ -130,7 +130,7 @@ $sql = $conn->query("SELECT email FROM nurse_account");
                 <div class="icon">
                   <i class="ion ion-bag"></i>
                 </div>
-                <?php echo $loggedInNurse['position'] === 'Nurse Leader' ? '<a href="register-nurse/" class="small-box-footer">Register New <i class="fas fa-plus-circle"></i></a>': '';?>
+                <?php echo $loggedInNurse['position'] === 'Nurse Leader' ? '<a href="nurses_all/" class="small-box-footer">View All <i class="fas fa-arrow-circle-right"></i></a>': '';?>
               </div>
             </div>
             <!-- ./col -->

@@ -44,6 +44,7 @@ class Nurse extends DataBase
                     if ($response['responseCode'] === 0){
                         $response = $this->saveNurseForTracking($accountResponse['accountID']);
                         if ($response['responseCode'] === 0){
+                            $this->sendEmail($email, $accountResponse['password'],$data['firstName']);
                             echo json_encode(array(
                                 'responseCode' => 0,
                                 'responseMessage' => 'Registered successfully! Please visit your email to change your default password'
@@ -225,22 +226,14 @@ class Nurse extends DataBase
                 VALUES ('$firstName', '$lastName', '$email', '$password_hash', '$phoneNumber', '$gender', '$date')";
         $this->conn->query($sql);
         if ($this->conn->affected_rows > 0){
-            $response = $this->sendEmail($email, $password, $firstName);
-            if ($response['responseCode'] === 0){
-                $sql = $this->conn->query("SELECT id FROM nurse_account WHERE email = '$email'");
-                $account = $sql->fetch_assoc();
-                if ($account){
-                    $id = $account['id'];
-                }else{
-                    return array(
-                        'responseCode' => 61,
-                        'responseMessage' => 'Failed to fetch account ID.'
-                    );
-                }
+            $sql = $this->conn->query("SELECT id FROM nurse_account WHERE email = '$email'");
+            $account = $sql->fetch_assoc();
+            if ($account){
+                $id = $account['id'];
             }else{
                 return array(
                     'responseCode' => 61,
-                    'responseMessage' => 'Failed to send email.'
+                    'responseMessage' => 'Failed to fetch account ID.'
                 );
             }
         }else{
@@ -253,7 +246,8 @@ class Nurse extends DataBase
             'responseCode' => 0,
             'responseMessage' => 'Email sent successfully.',
             'accountID' => $id,
-            'email' => $email
+            'email' => $email,
+            'password' => $password
         );
     }
 
