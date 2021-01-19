@@ -107,7 +107,7 @@ $title = 'Register Nurse';
 
                     </div>
                 </div>
-                <form id="addNurse" enctype="multipart/form-data">
+                <form id="addNurse" enctype="multipart/form-data" role="form" data-toggle="validator">
                     <input type="hidden" name="op" value="Nurse.saveNurseRecord">
                     <div class="container my-4" id="smartwizard">
                         <ul class="nav d-none d-lg-flex">
@@ -145,53 +145,68 @@ $title = 'Register Nurse';
                         <div class="tab-content">
                             <div id="step-1" class="tab-pane" role="tabpanel">
                                 <div class="container">
-                                    <div class="row">
+                                    <div id="form-step-0" role="form" data-toggle="validator">
+                                        <div class="row">
                                         <div class="col-12 mb-2">
                                             <h3 class="text-decoration-underline">Personal Information</h3>
                                         </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <input class="form-control" type="text" name="firstName" placeholder="First Name">
-                                        </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <input class="form-control" type="text" name="lastName" placeholder="Last Name">
-                                        </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                            <div class="col-12 col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="firstName" placeholder="First Name" required />
+                                                    <div class="help-block with-errors text-danger"></div>
                                                 </div>
-                                                <input type="email" class="form-control" name="email" placeholder="Email">
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <div class="form-group">
-                                                <input class="form-control" type="text" name="phoneNumber" placeholder="Phone Number">
+                                            <div class="col-12 col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="lastName" placeholder="Last Name" required>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
+                                            <div class="col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                                        </div>
+                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                    </div>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="phoneNumber" placeholder="Phone Number" required>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
                                                       <span class="input-group-text">
                                                         <i class="far fa-calendar-alt"></i>
                                                       </span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" name="dob" id="reservation" required>
                                                     </div>
-                                                    <input type="text" class="form-control float-right" name="dob" id="reservation">
+                                                    <div class="help-block with-errors text-danger"></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <div class="form-group">
-                                                <select class="form-control" name="gender">
-                                                    <option value="">::SELECT GENDER::</option>
-                                                    <option value="MALE">MALE</option>
-                                                    <option VALUE="FEMALE">FEMALE</option>
-                                                </select>
+                                            <div class="col-12 col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="gender" required>
+                                                        <option value="">::SELECT GENDER::</option>
+                                                        <option value="MALE">MALE</option>
+                                                        <option VALUE="FEMALE">FEMALE</option>
+                                                    </select>
+                                                    <div class="help-block with-errors text-danger "></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4 my-2">
-                                            <div class="form-group">
-                                                <textarea class="form-control" rows="3" cols="3" name="address" placeholder="Enter Address..."></textarea>
+                                            <div class="col-12 col-md-4 my-2">
+                                                <div class="form-group">
+                                                    <textarea class="form-control" style="max-height: 50px" name="address" placeholder="Enter Address..." required></textarea>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -199,63 +214,73 @@ $title = 'Register Nurse';
                             </div>
                             <div id="step-2" class="tab-pane" role="tabpanel">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h3 class="text-decoration-underline">Academic Qualification</h3>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="custom-file">
-                                                    <input type="text" class="form-control" name="higherInstitution" placeholder="Higher Institution Attended">
+                                    <div id="form-step-1" role="form" data-toggle="validator">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <h3 class="text-decoration-underline">Academic Qualification</h3>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="custom-file">
+                                                        <input type="text" class="form-control" name="higherInstitution" placeholder="Higher Institution Attended" required>
+                                                        <div class="help-block with-errors text-danger"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
                                                   <span class="input-group-text">
                                                     <i class="far fa-calendar-alt"></i>
                                                   </span>
+                                                        </div>
+                                                        <input type="text" class="form-control float-right" name="rangeOfStudy" id="startDate" required>
+                                                        <div class="help-block with-errors text-danger"></div>
                                                     </div>
-                                                    <input type="text" class="form-control float-right" name="rangeOfStudy" id="startDate">
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="">
-                                                    <input type="text" class="form-control" name="fieldOfStudy" placeholder="Field of Study/Major">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="">
+                                                        <input type="text" class="form-control" name="fieldOfStudy" placeholder="Field of Study/Major" required>
+                                                        <div class="help-block with-errors text-danger"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <select class="form-control select2" name="degree" style="width: 100%;">
-                                                    <?php
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control select2" name="degree" style="width: 100%;" required>
+                                                        <option value="">::SELECT DEGREE::</option>
+                                                        <?php
                                                         foreach ($degrees as $degree){
                                                             echo '<option value="'.$degree.'">'.$degree.'</option>';
                                                         }
-                                                    ?>
-                                                </select>
+                                                        ?>
+                                                    </select>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <select class="form-control select2" name="license" style="width: 100%;">
-                                                    <?php
-                                                    foreach ($licenseLetters as $letter){
-                                                        echo '<option value="'.$letter.'">'.$letter.'</option>';
-                                                    }
-                                                    ?>
-                                                </select>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control select2" name="license" required>
+                                                        <option value="">::SELECT LICENSE LETTER::</option>
+                                                        <?php
+                                                        foreach ($licenseLetters as $letter){
+                                                            echo '<option value="'.$letter.'">'.$letter.'</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="certificate" id="customFile">
-                                                    <label class="custom-file-label" for="customFile">Upload Certificate</label>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="certificate" id="customFile" required>
+                                                        <label class="custom-file-label" for="customFile">Upload Certificate</label>
+                                                        <div class="help-block with-errors text-danger"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,50 +289,58 @@ $title = 'Register Nurse';
                             </div>
                             <div id="step-3" class="tab-pane" role="tabpanel">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h3 class="text-decoration-underline">Job Information</h3>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <select class="form-control select2" name="position" style="width: 100%;">
-                                                    <?php
-                                                    foreach ($positions as $position){
-                                                        echo '<option value="'.$position.'">'.$position.'</option>';
-                                                    }
-                                                    ?>
-                                                </select>
+                                    <div id="form-step-2" role="form" data-toggle="validator">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <h3 class="text-decoration-underline">Job Information</h3>
                                             </div>
-                                        </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control select2" name="position" style="width: 100%;" required>
+                                                        <option value="">::SELECT POSITION::</option>
+                                                        <?php
+                                                        foreach ($positions as $position){
+                                                            echo '<option value="'.$position.'">'.$position.'</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
+                                            </div>
 
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
                                                       <span class="input-group-text">
                                                         &#8358
                                                       </span>
+                                                        </div>
+                                                        <input type="text" class="form-control" name="salary" placeholder="Gross Income" required>
                                                     </div>
-                                                    <input type="text" class="form-control" name="salary" placeholder="Gross Income">
+                                                    <div class="help-block with-errors text-danger"></div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <select class="form-control select2" name="ward" style="width: 100%;" data-placeholder="Ward">
-                                                    <?php
-                                                    foreach ($wards as $ward){
-                                                        echo '<option value="'.$ward.'">'.$ward.'</option>';
-                                                    }
-                                                    ?>
-                                                </select>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control select2" name="ward" style="width: 100%;" data-placeholder="Ward" required>
+                                                        <option value="">::SELECT WARD::</option>
+                                                        <?php
+                                                        foreach ($wards as $ward){
+                                                            echo '<option value="'.$ward.'">'.$ward.'</option>';
+                                                        }
+                                                        ?>
+                                                    </select>
+                                                    <div class="help-block with-errors text-danger"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="custom-file">
-                                                    <input type="file" class="custom-file-input" name="passport" id="customFile1">
-                                                    <label class="custom-file-label" for="customFile1">Upload Passport</label>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" name="passport" id="customFile1" required>
+                                                        <label class="custom-file-label" for="customFile1">Upload Passport</label>
+                                                        <div class="help-block with-errors text-danger"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -316,33 +349,39 @@ $title = 'Register Nurse';
                             </div>
                             <div id="step-4" class="tab-pane" role="tabpanel">
                                 <div class="container">
-                                    <div class="row">
-                                        <div class="col-12 mb-2">
-                                            <h3 class="text-decoration-underline">Bank Details</h3>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <select class="form-control select2" name="bank" style="width: 100%;" data-placeholder="Ward">
-                                                        <?php
-                                                        foreach ($banks as $bank){
-                                                            echo '<option value="'.$bank.'">'.$bank.'</option>';
-                                                        }
-                                                        ?>
-                                                    </select>
+                                    <div id="form-step-3" role="form" data-toggle="validator">
+                                        <div class="row">
+                                            <div class="col-12 mb-2">
+                                                <h3 class="text-decoration-underline">Bank Details</h3>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <select class="form-control select2" name="bank" style="width: 100%;" required>
+                                                            <option value="">::SELECT BANK::</option>
+                                                            <?php
+                                                            foreach ($banks as $bank){
+                                                                echo '<option value="'.$bank.'">'.$bank.'</option>';
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                        <div class="help-block with-errors text-danger"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <div class="">
-                                                    <input type="text" class="form-control" name="accountNumber" placeholder="Account Number">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <div class="">
+                                                        <input type="text" class="form-control" name="accountNumber" placeholder="Account Number" required>
+                                                        <div class="help-block with-errors text-danger"></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="sortCode" placeholder="Sort Code">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="sortCode" placeholder="Sort Code">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -376,6 +415,7 @@ $title = 'Register Nurse';
   <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
   <!--  Form Wizard -->
   <script src="assets/dist/js/jquery.smartWizard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>
   <script>
       // SmartWizard initialize
       $('#smartwizard').smartWizard({
@@ -404,7 +444,6 @@ $title = 'Register Nurse';
                       .addClass('btn btn-success sw-btn-finish')
                       .css({'background-color':'#28a745 !important'})
                       .on('click', function(){
-
                       }),
                   $('<button></button>').text('Cancel')
                       .addClass('btn btn-danger sw-btn-cancel')
@@ -445,6 +484,19 @@ $title = 'Register Nurse';
               $(".sw-btn-cancel").hide();
               $(".sw-btn-next").show();
           }
+      });
+      $("#smartwizard").on('leaveStep', function (e, anchorObject, stepNumber, stepDirection, stepPosition){
+          const elmForm = $('#form-step-'+stepNumber);
+          console.log(elmForm)
+          if (stepPosition === 'forward' && elmForm){
+              $(elmForm).validator('validate');
+              const elmErr = $(elmForm).find('.has-error');
+              console.log(elmErr);
+              if (elmErr && elmErr.length > 0){
+                  return false;
+              }
+          }
+          return true;
       });
   </script>
   <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -503,6 +555,7 @@ $title = 'Register Nurse';
   <script src="assets/dist/js/adminlte.js"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
   <script src="assets/dist/js/pages/dashboard.js"></script>
+  <script src="assets/dist/js/jquery.validate.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="assets/dist/js/demo.js"></script>
   <script src="assets/dist/js/main.js"></script>

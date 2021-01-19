@@ -211,7 +211,7 @@ class SaveNurse extends DataBase
                 $result = $this->conn->query($sql);
                 $nurse = $result->fetch_assoc();
 
-                if (unlink($this->uploadPathCertificate.$nurse['image'])){
+                if (unlink($this->uploadPathPassport.$nurse['image'])){
                     if (move_uploaded_file($file['tmp_name'], $uploadDir.$file['name'])){
                         rename($uploadDir.$file['name'], $uploadDir.$nurse['email'].'.'.$fileType);
                         $fileName = $nurse['email'].'.'.$fileType;

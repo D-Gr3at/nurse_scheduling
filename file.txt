@@ -1,2 +1,2 @@
 SELECT first_name, last_name, nd.position, nd.ward, phone_number, created, na.id FROM nurse_account na
-                INNER JOIN nurse_details nd ON nd.nurse_id = na.id INNER  JOIN nurse_tracker nt ON nt.nurse_id = na.id WHERE na.verified = 1 ORDER BY first_name asc LIMIT 0, 10
+                INNER JOIN nurse_details nd ON nd.nurse_id = na.id INNER  JOIN nurse_tracker nt ON nt.nurse_id = na.id WHERE nt.status = 'ACTIVE' ORDER BY first_name asc LIMIT 0, 10

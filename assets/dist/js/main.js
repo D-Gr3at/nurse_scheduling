@@ -45,40 +45,44 @@ $('document').ready(function () {
     $('#addNurse').on('submit', function (e){
         e.preventDefault();
         let formData = new FormData(this);
-        $.ajax({
-            type: "POST",
-            url: "utilities.php",
-            data: formData,
-            dataType: 'json',
-            contentType: false,
-            cache: false,
-            processData: false,
-            beforeSend: function (){
-                $('#addNurseButton').empty();
-                $('#addNurseButton').append(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Please wait ...`)
-            },
-            success: function (response) {
-                response = JSON.parse(response);
-                if (response.responseCode === 0){
-                    $('#smartwizard').prepend(
-                        `<div class="alert alert-success text-center font-weight-bold " role="alert">
+        if ($(this).valid()){
+            $.ajax({
+                type: "POST",
+                url: "utilities.php",
+                data: formData,
+                dataType: 'json',
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function (){
+                    $('#addNurseButton').empty();
+                    $('#addNurseButton').append(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Please wait ...`)
+                },
+                success: function (response) {
+                    // response = JSON.parse(response);
+                    $('#addNurseButton').empty();
+                    $('#addNurseButton').text('Finish');
+                    if (response.responseCode === 0){
+                        $('#smartwizard').prepend(
+                            `<div class="alert alert-success text-center font-weight-bold " role="alert">
                             ${response.responseMessage}
                         </div>`
-                    );
-                    $('#addNurse').trigger('reset');
-                    setTimeout(() => {
-                        location.reload();
-                    }, 3000)
-                }else {
-                    // $('#smartwizard').find('.alert-danger').remove();
-                    $('#smartwizard').prepend(
-                        `<div class="alert alert-danger text-center font-weight-bold " role="alert">
+                        );
+                        $('#addNurse').trigger('reset');
+                        setTimeout(() => {
+                            location.reload();
+                        }, 3000)
+                    }else {
+                        // $('#smartwizard').find('.alert-danger').remove();
+                        $('#smartwizard').prepend(
+                            `<div class="alert alert-danger text-center font-weight-bold " role="alert">
                             ${response.responseMessage}
                         </div>`
-                    );
+                        );
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 
     $('#resetPasswordForm').submit(function (){

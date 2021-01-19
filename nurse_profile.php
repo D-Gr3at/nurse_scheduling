@@ -177,7 +177,7 @@ $title = 'Profile | '.$employee['first_name'].' '.$employee['last_name'];
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Position</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" id="inputName" name="position"  <?php echo $employee['position'] === 'Nurse Leader' ? 'disabled' : ''; ?> style="width: 100%;">
+                                                    <select class="form-control" id="inputName" name="position"  <?php echo $employee['position'] === 'Nurse Leader' ? 'readonly' : ''; ?> style="width: 100%;">
                                                         <?php
                                                         foreach ($positions as $position){
                                                             if ($position === $employee['position'])

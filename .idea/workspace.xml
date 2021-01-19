@@ -20,15 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="480d9c92-b53c-4b70-ae14-283221035ecb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/all_nurses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/bootstrap-validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/js/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/nurse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nurse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/add_nurse.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_nurse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/include/side_bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/assets/include/side_bar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/nurse.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/nurse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class/nurses_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/nurses_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/profile_image/billeibinabo@gmail.com.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/profile_image/billeibinabo@gmail.com.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/save_nurse.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/save_nurse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nurse_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/nurse_profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +62,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/plugins" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/dist/js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,11 +74,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\nurse\assets\plugins" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\nurse" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nurse\assets\dist\js" />
+      <recent name="C:\xampp\htdocs\nurse\assets\plugins" />
       <recent name="C:\xampp\htdocs\nurse" />
     </key>
   </component>
@@ -96,7 +99,7 @@
       <workItem from="1610895699228" duration="678000" />
       <workItem from="1610912246576" duration="742000" />
       <workItem from="1610953662168" duration="1234000" />
-      <workItem from="1610963888226" duration="1843000" />
+      <workItem from="1610963888226" duration="21662000" />
     </task>
     <servers />
   </component>
